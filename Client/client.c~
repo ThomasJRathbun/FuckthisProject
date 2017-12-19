@@ -316,9 +316,8 @@ int dirTraversal(char* filename, char* headerTitle, char* host_name, int PORT){
 			      	break;
   			}
   			printf("dirTraversal:: NEW ENTRY\n");
-  			
+  			entry = readdir(base);
   		}//end of switch
-  		entry = readdir(base);
   	}// end of while
   	return 0;
 

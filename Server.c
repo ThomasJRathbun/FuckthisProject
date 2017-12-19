@@ -31,11 +31,11 @@ typedef struct _info{
 #define BACKLOG 256 //max number of connections
 
 //tokenize on ,
-bool tokenize( int counter,/*node* head,*/ int chosen ,char* buffer)
+bool tokenize( int counterc,/*node* head,*/ int chosen ,char* buffer)
 {
-		printf("TOKEN addr head: %p\n",(finalList[counter]));
-		if((finalList[counter]) != NULL)
-		printf("head before new node: %s\n\n",(finalList[counter])->data[0]);
+		printf("TOKEN addr head: %p\n",(finalList[counterc]));
+		if((finalList[counterc]) != NULL)
+		printf("head before new node: %s\n\n",(finalList[counterc])->data[0]);
 	size_t size;
 	int c = 0;
 	bool isNumber = TRUE;
@@ -112,22 +112,22 @@ bool tokenize( int counter,/*node* head,*/ int chosen ,char* buffer)
 
 	}
 	
-	if( finalList[counter] == NULL )
+	if( finalList[counterc] == NULL )
 	{
 		printf("head is NULL\n");
-		(finalList[counter]) = newNode;
-		printf("head[6]: %s\n",(finalList[counter])->data[6]);
+		(finalList[counterc]) = newNode;
+		printf("head[6]: %s\n",(finalList[counterc])->data[6]);
 	}
 	else 
 	{
 		printf("BEFORE  addr newNode: %p\n",(newNode));
-		newNode->next = (finalList[counter]);
-		(finalList[counter]) = newNode;
-		printf("head[6]: %s\n",(finalList[counter])->data[6]);
+		newNode->next = (finalList[counterc]);
+		(finalList[counterc]) = newNode;
+		printf("head[6]: %s\n",(finalList[counterc])->data[6]);
 		printf("AFTER addr newNode: %p\n",(newNode));
 	}	
 	
-	node* curr = (finalList[counter]);
+	node* curr = (finalList[counterc]);
 	
 	while(curr != NULL)
 	{
